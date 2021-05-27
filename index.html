@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Double//Espresso</title>
+  </head>
+
+  <body>
+    <main>
+      <article class="box__wrapper">
+        <section class="box box__blank"></section>
+
+        <section class="box box__announce announce">
+          <video class="announce__video" src="./assets/images/movies/film.mp4" muted loop autoplay></video>
+          <div class="announce__image"></div>
+
+          <div class="announce__wrapper">
+            <h2 class="announce__title">Audi RS e-tron GT</h2>
+
+            <div class="announce__content">
+              <p class="announce__description">
+                Czysta energia <br />
+                i sportowe osiągi
+              </p>
+              <button class="announce__btn btn-open">Dowiedz się więcej</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="box box__blank"></section>
+        <section class="box box__blank"></section>
+      </article>
+    </main>
+
+    <!-- Modal -->
+    <section class="modal">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Konfigurator -->
+          <div class="swiper-slide card card--config">
+            <div class="card__header">
+              <div class="card__top">
+                <h2 class="card__subtitle">Audi RS e-tron GT</h2>
+                <button class="card__btn btn-close">zamknij x</button>
+              </div>
+              <img class="card__logo" src="./assets/images/logo_audi.svg" alt="logo" />
+              <h1 class="card__title">
+                Stwórz swoje <br />
+                Audi RS e-tron GT
+              </h1>
+            </div>
+
+            <div class="card__body">
+              <div class="card__picture">
+                <img src="./assets/images/nadwozia/Szary Daytona.png" class="card__picture-body" />
+                <img src="./assets/images/felgi/2.png" class="card__picture-wheel" />
+              </div>
+
+              <div class="card__details">
+                <ul class="card__details-list">
+                  <li class="card__details-item">
+                    <span class="card__details-item-title"> Kolor: </span>
+                    <span class="card__details-item-detail">
+                      <span id="selected-color">Szary Daytona</span>
+                      <span>, perłowy</span>
+                    </span>
+                  </li>
+                  <li class="card__details-item">
+                    <span class="card__details-item-title"> Obręcze: </span>
+                    <span class="card__details-item-detail">
+                      <span>
+                        21’’, 5 - ramienne, <br />
+                        z podwójnymi ramionami Konkav, <br />
+                        czarne z graficznym nadrukiem
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab">
+                <ul class="tab__title">
+                  <li class="tab__title-item active" id="0">Lakiery nadwozia</li>
+                  <li class="tab__title-item" id="1">Obręcze</li>
+                </ul>
+
+                <div class="tab__select">
+                  <ul class="tab__select-list tab__select--body active">
+                    <li class="tab__select-item" id="Szary Kemora">
+                      <img src="./assets/images/kolory-nadwozia/1.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Szary Suzuka">
+                      <img src="./assets/images/kolory-nadwozia/2.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Czerwony Tango">
+                      <img src="./assets/images/kolory-nadwozia/3.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Czarny Myth">
+                      <img src="./assets/images/kolory-nadwozia/4.png" alt="" />
+                    </li>
+                    <li class="tab__select-item active" id="Szary Daytona">
+                      <img src="./assets/images/kolory-nadwozia/5.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Niebieski Ascari">
+                      <img src="./assets/images/kolory-nadwozia/6.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Srebrny Florett">
+                      <img src="./assets/images/kolory-nadwozia/7.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Biały Ibis">
+                      <img src="./assets/images/kolory-nadwozia/8.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="Zielony Tactics">
+                      <img src="./assets/images/kolory-nadwozia/9.png" alt="" />
+                    </li>
+                  </ul>
+
+                  <ul class="tab__select-list tab__select--wheels">
+                    <li class="tab__select-item active" id="2">
+                      <img src="./assets/images/rodzaje-felg/2.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="3">
+                      <img src="./assets/images/rodzaje-felg/3.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="4">
+                      <img src="./assets/images/rodzaje-felg/4.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="5">
+                      <img src="./assets/images/rodzaje-felg/5.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="6">
+                      <img src="./assets/images/rodzaje-felg/6.png" alt="" />
+                    </li>
+                    <li class="tab__select-item" id="7">
+                      <img src="./assets/images/rodzaje-felg/7.png" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__footer">
+              <div class="pagination">
+                <span class="page page--prev">
+                  <span class="page__title">RS e-tron GT </span>
+                  <span class="page__number">01</span>
+                </span>
+                <span class="page">
+                  <span class="page__title">Konfigurator</span>
+                  <span class="page__number">02</span>
+                </span>
+                <span class="page page--next">
+                  <span class="page__title">Osiągi</span>
+                  <span class="page__number">03</span>
+                </span>
+              </div>
+              <span class="swipe">« SWIPE »</span>
+            </div>
+          </div>
+
+          <!-- Osiągi -->
+          <div class="swiper-slide card card--performance">
+            <div class="card__header">
+              <div class="card__top">
+                <h2 class="card__subtitle">Audi RS e-tron GT</h2>
+                <button class="card__btn btn-close">zamknij x</button>
+              </div>
+              <img class="card__logo" src="./assets/images/logo_audi.svg" alt="logo" />
+              <h1 class="card__title card__title--performance">
+                Czysta energia <br />
+                i sportowe osiągi
+              </h1>
+            </div>
+
+            <div class="card__body">
+              <div class="card__details">
+                <ul class="card__details-list">
+                  <li class="card__details-item details-item--performance">
+                    <span class="card__details-item-title details-item-title--performance">moc</span>
+                    <span class="card__details-item-detail details-item-detail--performance">
+                      <span class="performance-number">440</span>
+                      <span class="performance-unit">kw</span>
+                    </span>
+                  </li>
+                  <li class="card__details-item details-item--performance">
+                    <span class="card__details-item-title details-item-title--performance">
+                      przyśpieszenie <br />
+                      0-100km/h
+                    </span>
+                    <span class="card__details-item-detail details-item-detail--performance">
+                      <span class="performance-number">3,3</span>
+                      <span class="performance-unit">s</span>
+                    </span>
+                  </li>
+                  <li class="card__details-item details-item--performance">
+                    <span class="card__details-item-title details-item-title--performance">
+                      system<br />
+                      ładowania</span
+                    >
+                    <span class="card__details-item-detail details-item-detail--performance">
+                      <span class="performance-number">800</span>
+                      <span class="performance-unit">woltów</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card__details-description">
+                <span>
+                  Emisja CO2 w trybie mieszanym1: 0–0 g/km <br />
+                  Zużycie paliwa w trybie mieszanym1: 21,7–20,6 kWh/100 km
+                </span>
+              </div>
+            </div>
+
+            <div class="card__footer">
+              <div class="pagination">
+                <span class="page page--prev">
+                  <span class="page__title">Konfigurator</span>
+                  <span class="page__number">02</span>
+                </span>
+                <span class="page">
+                  <span class="page__title">Osiągi</span>
+                  <span class="page__number">03</span>
+                </span>
+                <span class="page page--next">
+                  <span class="page__title">Silnik</span>
+                  <span class="page__number">04</span>
+                </span>
+              </div>
+              <span class="swipe">« SWIPE »</span>
+            </div>
+          </div>
+
+          <!-- Silnik -->
+          <div class="swiper-slide card card--engine">
+            <div class="card__header">
+              <div class="card__top">
+                <h2 class="card__subtitle">Audi RS e-tron GT</h2>
+                <button class="card__btn btn-close">zamknij x</button>
+              </div>
+              <img class="card__logo" src="./assets/images/logo_audi.svg" alt="logo" />
+              <h1 class="card__title card__title--performance">
+                Akustyka,<br />
+                która fascynuje
+              </h1>
+            </div>
+
+            <div class="card__body">
+              <div class="card__wrapper">
+                <div class="sound__wrapper">
+                  <div class="sound__wrapper-first"></div>
+                  <div class="sound__wrapper-second"></div>
+                  <div class="sound__wrapper-third"></div>
+
+                  <div class="sound__wrapper-title">
+                    <span>
+                      DOTKNIJ PRZYCISK, <br />
+                      ABY POSŁUCHAĆ SILNIKA
+                    </span>
+                  </div>
+                </div>
+                <div class="sound__button">
+                  <button class="btn btn-start">START</button>
+                  <button class="btn btn-stop disable">STOP</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__footer">
+              <div class="pagination">
+                <span class="page page--prev">
+                  <span class="page__title">Osiągi</span>
+                  <span class="page__number">03</span>
+                </span>
+                <span class="page">
+                  <span class="page__title">Silnik</span>
+                  <span class="page__number">04</span>
+                </span>
+              </div>
+              <span class="swipe">« SWIPE »</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module">
+      import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+
+      const swiper = new Swiper('.swiper-container');
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

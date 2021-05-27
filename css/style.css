@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import './font.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* First screen - zajawka */
+.box__wrapper {
+  display: grid;
+  grid-gap: 0.5rem;
+  margin: 0.5rem;
+}
+
+.box {
+  height: 15.625rem;
+  overflow: hidden;
+}
+
+/* False box */
+.box__blank {
+  background: #dddbdb;
+  height: 8rem;
+}
+
+/* Announce box */
+.box__announce {
+  position: relative;
+}
+
+.announce__video {
+  position: absolute;
+  width: 100%;
+}
+
+.announce__image {
+  position: absolute;
+  bottom: -0.5rem;
+  width: 110%;
+  background: url(../assets/images/tla/tlo.png) no-repeat top center;
+  background-size: cover;
+  height: 50%;
+}
+
+.announce__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: inherit;
+  padding: 1rem 1rem 0.5rem;
+  color: white;
+}
+
+.announce__title {
+  font-family: 'AudiType-ExtendedBold';
+  font-size: 0.75rem;
+}
+
+.announce__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announce__description {
+  font-family: 'AudiType-ExtendedNormal';
+  font-size: 0.875rem;
+}
+
+.announce__btn {
+  font-family: 'AudiType-Normal';
+  font-size: 0.625rem;
+  height: fit-content;
+  color: #000;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+/* Modal */
+.modal {
+  visibility: hidden;
+  /* visibility: visible; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+
+.modal--active {
+  visibility: visible;
+}
+
+/* Swiper */
+.swiper-container {
+  width: 600px;
+  height: 100%;
+  margin: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  color: white;
+}
+
+.swiper-slide {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Card screen background*/
+.card--config {
+  background: url(../assets/images/tla/2_konfigurator_pod_auto.png) no-repeat center center;
+  background-size: cover;
+}
+
+.card--performance {
+  background: url(../assets/images/tla/3_osiagi.png) no-repeat center center;
+  background-size: cover;
+  background-position-y: 3rem;
+}
+
+.card--engine {
+  background: url(../assets/images/tla/4_silnik.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* Second screen */
+/* KONFIGURATOR */
+
+/* Card header */
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.card__subtitle {
+  font-family: 'AudiType-ExtendedBold';
+  font-size: 0.625rem;
+}
+
+.card__btn {
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.625rem;
+  letter-spacing: 2px;
+}
+
+.card__logo {
+  display: block;
+  margin: 2.5rem auto 3.5rem;
+  height: 2.5rem;
+}
+
+.card__title {
+  margin: auto;
+  text-align: center;
+  width: 60%;
+  font-family: 'AudiType-ExtendedBold';
+  font-size: 1.125rem;
+  background-image: linear-gradient(37deg, rgba(20, 20, 21, 1) 0%, rgb(152, 19, 40) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card body - car picker */
+.card__picture {
+  height: 10rem;
+  position: relative;
+}
+
+.card__picture-body {
+  height: 100%;
+}
+
+.card__picture-wheel {
+  position: absolute;
+  bottom: 15px;
+  height: 75px;
+  left: 0;
+}
+
+.card__details {
+  font-size: 0.625rem;
+  line-height: 0.6875rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card__details-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card__details-item {
+  margin-bottom: 0.3rem;
+  display: flex;
+}
+
+.card__details-item-title {
+  font-family: 'AudiType-ExtendedBold';
+  text-align: right;
+  padding-right: 0.25rem;
+  width: 25%;
+}
+
+.card__details-item-detail {
+  font-family: 'AudiType-ExtendedNormal';
+}
+
+/* Tabs with picker */
+.tab {
+  padding-top: 1.3rem;
+  border-top: 1px solid #89898c;
+}
+
+.tab__title {
+  display: flex;
+  justify-content: center;
+  font-family: 'AudiType-ExtendedNormal';
+  font-size: 0.625rem;
+}
+
+.tab__title-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.tab__title-item {
+  border-bottom: 1px solid transparent;
+  margin: 0 1.125rem;
+  transition: 0.25s all;
+}
+
+.tab__title-item:hover,
+.tab__title-item.active {
+  border-bottom: 1px solid white;
+}
+
+/* Color and wheels picker */
+.tab__select {
+  display: flex;
+  padding-top: 0.8rem;
+}
+
+.tab__select-list {
+  display: none;
+  justify-content: center;
+  margin: auto;
+  width: 21.4375rem;
+}
+
+.tab__select-list.active {
+  display: flex;
+}
+
+.tab__select-item {
+  margin: 0.375rem;
+}
+
+.tab__select-item img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.tab__select-item.active img {
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+/* Footer */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.875rem;
+}
+
+.swipe {
+  display: block;
+  text-align: center;
+  font-family: 'AudiType-ExtendedNormal';
+  letter-spacing: 2px;
+  font-size: 0.675rem;
+}
+
+.page {
+  position: relative;
+  font-family: 'AudiType-ExtendedBold';
+  font-size: 0.875rem;
+}
+
+.page--prev {
+  position: absolute;
+  left: -2.25rem;
+}
+
+.page--next {
+  position: absolute;
+  right: 0;
+}
+
+.page--prev .page__number,
+.page--next .page__number {
+  font-size: 2.875rem;
+  color: #1b1b20;
+}
+
+.page--prev .page__title,
+.page--next .page__title {
+  font-size: 0.625rem;
+  color: #414145;
+}
+
+.page::before,
+.page::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 2rem;
+  background: #414145;
+}
+
+.page::before {
+  left: -2.5rem;
+}
+
+.page::after {
+  right: -2.5rem;
+}
+
+.page--prev::after,
+.page--next::before {
+  content: none;
+}
+
+.page__title {
+  position: relative;
+  display: block;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.page__number {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  color: #2a0f15;
+}
+
+/* OSIĄGI */
+/* Header */
+.card--performance .card__title {
+  background-image: linear-gradient(
+    90deg,
+    hsla(203, 12%, 61%, 1) 0%,
+    hsla(351, 79%, 38%, 1) 72%,
+    hsla(351, 76%, 31%, 1) 97%
+  );
+}
+
+/* Card body - performance details*/
+.card--performance .card__body {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card--performance .card__body .card__details-list {
+  width: 50%;
+  min-width: 275px;
+  margin: auto;
+}
+
+.details-item--performance {
+  margin-bottom: 1rem;
+}
+
+.details-item-title--performance {
+  font-size: 0.5625rem;
+  font-family: 'AudiType-ExtendedNormal';
+  align-self: flex-end;
+  padding-right: 0.5rem;
+  width: 40%;
+}
+
+.details-item-detail--performance {
+  font-size: 0.75rem;
+  font-family: 'AudiType-ExtendedBold';
+}
+
+.performance-number {
+  font-size: 2.1875rem;
+}
+
+.performance-unit {
+  margin-left: -0.2rem;
+}
+
+.card__details-description {
+  margin-bottom: 0;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.625rem;
+  font-family: 'AudiType-Normal';
+  color: #5c5c65;
+}
+
+/* Footer */
+.card--performance .card__footer .page::before {
+  left: -3.5rem;
+}
+
+.card--performance .card__footer .page::after {
+  right: -3.5rem;
+}
+
+/* SILNIK */
+/* Header */
+.card--engine .card__title {
+  background-image: linear-gradient(
+    90deg,
+    hsla(352, 92%, 42%, 1) 1%,
+    hsla(353, 54%, 43%, 1) 35%,
+    hsla(353, 4%, 43%, 1) 97%
+  );
+}
+
+/* Card body - engine details*/
+.card--engine .card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.sound__wrapper {
+  position: relative;
+  width: 14.625rem;
+  height: 14.625rem;
+}
+
+.sound__button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  z-index: 3;
+}
+
+.sound__button .btn {
+  font-size: 0.75rem;
+  font-family: 'AudiType-ExtendedNormal';
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  border: none;
+  padding: 1px;
+}
+
+.sound__wrapper-first {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75%;
+  width: 75%;
+  background: url('../assets/images/button/Layer\ 20.png') no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.sound__wrapper-second {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: url('../assets/images/button/fala.png') no-repeat center center;
+  background-size: cover;
+}
+
+.sound__wrapper-third {
+  position: absolute;
+  top: 53%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  height: 94%;
+  width: 96%;
+  background: url('../assets/images/button/fala.png') no-repeat center center;
+  background-size: cover;
+}
+
+.sound__wrapper-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  font-family: 'AudiType-ExtendedBold';
+  color: #fff;
+}
+
+.sound__button .btn.disable {
+  color: #29292a;
+}
+
+/* Footer - engine screen */
+.card--engine .card__footer .page__number {
+  color: #5c3945;
+}
+
+.card--engine .card__footer .page--prev .page__title {
+  color: #726a6b;
+}
+.card--engine .card__footer .page--prev {
+  left: -0.5rem;
+}
+
+.card--engine .card__footer .page::before {
+  left: -5rem;
+  background: #726a6b;
+}
+
+/* RWD */
+
+@media screen and (max-width: 350px) {
+  /* Konfigurator */
+  .card__wrapper {
+    height: 60%;
+  }
+
+  .card__picture-body {
+    height: 90%;
+  }
+
+  .card__picture-wheel {
+    bottom: 26px;
+    height: 72px;
+    left: -3px;
+  }
+
+  .card__details {
+    margin-top: -0.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .pagination {
+    margin-bottom: 0.5rem;
+  }
+
+  .page__number {
+    font-size: 2.8rem;
+  }
+
+  .page__title {
+    font-size: 0.8rem;
+  }
+
+  .swipe {
+    font-size: 0.5rem;
+  }
+
+  /* Osiągi */
+  .card--performance {
+    background-position-y: 4rem;
+  }
+
+  .card--performance .card__details {
+    margin-top: 1.4rem;
+  }
+
+  .details-item--performance {
+    margin-bottom: 0.6rem;
+  }
+
+  .performance-number {
+    font-size: 1.6rem;
+  }
+
+  .card__details-description {
+    margin-bottom: 12px;
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* Konfigurator */
+  .tab {
+    padding-top: 0.5rem;
+  }
+
+  .tab__select {
+    padding-top: 0.3rem;
+  }
+
+  .tab__select-item {
+    margin: 0.2rem;
+  }
+
+  /* Osiągi */
+  .card__details-description {
+    margin-bottom: 12px;
+    font-size: 0.6rem;
+  }
+
+  /* Silnik */
+  .card--engine .card__wrapper {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Silnik */
+
+  .sound__wrapper {
+    width: 13.625rem;
+    height: 13.625rem;
+  }
+}

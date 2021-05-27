@@ -1,0 +1,54 @@
+@font-face {
+  font-family: AudiType-Bold;
+  src: url(../assets/font/AudiType-Bold_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-BoldItalic;
+  src: url(../assets/font/AudiType-BoldItalic_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-ExtendedBold;
+  src: url(../assets/font/AudiType-ExtendedBold_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-ExtendedBoldItalic;
+  src: url(../assets/font/AudiType-ExtendedBoldItalic_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-ExtendedItalic;
+  src: url(../assets/font/AudiType-ExtendedItalic_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-ExtendedNormal;
+  src: url(../assets/font/AudiType-ExtendedNormal_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-Italic;
+  src: url(../assets/font/AudiType-Italic_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-Normal;
+  src: url(../assets/font/AudiType-Normal_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-WideBold;
+  src: url(../assets/font/AudiType-WideBold_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-WideLight;
+  src: url(../assets/font/AudiType-WideLight_4.03.ttf);
+}
+
+@font-face {
+  font-family: AudiType-WideNormal;
+  src: url(../assets/font/AudiType-WideNormal_4.03.ttf);
+}
